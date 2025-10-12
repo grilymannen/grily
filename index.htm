@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="hide-scrollbar">
+
+<head>
+    <title>My website</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body id="page">
+    <div id="header">
+        <img id="header-image" alt="Yo, my image doesn't work lmao">
+        <div class="centered">
+            <div id="header-content">
+                <h1>My website</h1>
+                <p>Made by <a>grily</a></p>
+            </div>
+        </div>
+        <div id="credits" class="bottom-right">
+            <button type="button" onclick="checkDate()">Refresh</button>
+            <button type="button" onclick="toggleBlur()">Toggle Blur</button>
+            <br>
+            <a id="image-source" href="#">Art</a>
+            <span>by</span>
+            <a id="artist" href="#">Artist</a>
+        </div>
+    </div>
+    <div id="navigation-bar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li>
+                <div class="dropdown">
+                    <button type="button" onclick="toggleDropdown()" class="dropdown-button">Friends</button>
+                    <div class="dropdown-content">
+                        <a href="#">a</a>
+                        <a href="#">b</a>
+                        <a href="#">c</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">Socials</a></li>
+            <li><a href="#">Write me</a></li>
+        </ul>
+    </div>
+    <br>
+    <div style="height: 100px;"></div>
+    <script src="bg.js"></script>
+    <script src="dropdown.js"></script>
+</body>
+
+</html>
