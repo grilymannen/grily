@@ -1,20 +1,20 @@
 const artworks = [
-    { image: 'Background Images/6dc316c8d5b343961a3547a575264507.jpg', imageSource: 'https://www.tumblr.com/tacheaway/791527145214263296/sneaked-the-lil-guy-on-the-family-holiday-he', artist: 'tacheaway', artistSource: 'https://www.tumblr.com/tacheaway', backgroundColor: '#e9e2c5' },
-    { image: 'Background Images/GwJiBZLXsAEkS0F.jpg', imageSource: 'https://x.com/fryprai/status/1946225768234971632', artist: 'fryprai', artistSource: 'https://linktr.ee/fryprai', backgroundColor: '#ffffff' },
-    { image: 'Background Images/Gy0hcQ7WYAAklpv.jpg', imageSource: 'https://x.com/salamitown/status/1890542383722340749', artist: 'salamitown', artistSource: 'https://salamitown.carrd.co/', backgroundColor: '#010103' },
-    { image: 'Background Images/GyACQGeWUAI74ER.jpg', imageSource: 'https://x.com/shug8888/status/1954564731282333884', artist: 'SHUG888', artistSource: '', backgroundColor: '#b1fdf1' },
-    { image: '', imageSource: '', artist: '', artistSource: '', backgroundColor: '' },
-    { image: '', imageSource: '', artist: '', artistSource: '', backgroundColor: '' },
-    { image: '', imageSource: '', artist: '', artistSource: '', backgroundColor: '' },
-    { image: '', imageSource: '', artist: '', artistSource: '', backgroundColor: '' },
-    { image: '', imageSource: '', artist: '', artistSource: '', backgroundColor: '' },
-    { image: '', imageSource: '', artist: '', artistSource: '', backgroundColor: '' },
+    { image: 'Background Images/6dc316c8d5b343961a3547a575264507.jpg', imageSource: 'https://www.tumblr.com/tacheaway/791527145214263296/sneaked-the-lil-guy-on-the-family-holiday-he', artist: 'tacheaway', artistSource: 'https://www.tumblr.com/tacheaway'},
+    { image: 'Background Images/GwJiBZLXsAEkS0F.jpg', imageSource: 'https://x.com/fryprai/status/1946225768234971632', artist: 'fryprai', artistSource: 'https://linktr.ee/fryprai'},
+    { image: 'Background Images/Gy0hcQ7WYAAklpv.jpg', imageSource: 'https://x.com/salamitown/status/1890542383722340749', artist: 'salamitown', artistSource: 'https://salamitown.carrd.co/'},
+    { image: 'Background Images/GyACQGeWUAI74ER.jpg', imageSource: 'https://x.com/shug8888/status/1954564731282333884', artist: 'SHUG888', artistSource: ''},
+    { image: '', imageSource: '', artist: '', artistSource: ''},
+    { image: '', imageSource: '', artist: '', artistSource: ''},
+    { image: '', imageSource: '', artist: '', artistSource: ''},
+    { image: '', imageSource: '', artist: '', artistSource: ''},
+    { image: '', imageSource: '', artist: '', artistSource: ''},
+    { image: '', imageSource: '', artist: '', artistSource: ''},
 ];
 const colorPalettes = [
-    {backgroundColor: '#e9e2c5', color_1: '', color_2: '', color_3: ''},
-    {backgroundColor: '#e9e2c5', color_1: '', color_2: '', color_3: ''},
-    {backgroundColor: '#e9e2c5', color_1: '', color_2: '', color_3: ''},
-    {backgroundColor: '#b1fcf3', color_1: '#68719c', color_2: '#f0e4ed', color_3: '#8ac2c3'},
+    {primaryColor: '#d68d71', secondaryColor: '#d1942e', backgroundColor: '#e9e2c5', textColor: '#460000'},
+    {primaryColor: '#bebccb', secondaryColor: '#4f4d5f', backgroundColor: '#ffffff', textColor: '#17171c'},
+    {primaryColor: '#e89788', secondaryColor: '#d25c56', backgroundColor: '#000309', textColor: '#e8b9b3'},
+    {primaryColor: '#8ac2c3', secondaryColor: '#68719c', backgroundColor: '#b1fcf3', textColor: '#2e5986'},
 ];
 
 function checkDate() {
@@ -43,9 +43,12 @@ function toggleBlur() {
 };
 
 function colorPaletteUpdate(colorPaletteIndex) {
-    document.getElementById('page').style.backgroundColor = colorPalettes[colorPaletteIndex].backgroundColor
-    document.getElementById('navigation-bar').style.backgroundColor = colorPalettes[colorPaletteIndex].color_3
-    return;
+    const palette = colorPalettes[colorPaletteIndex];
+    
+    document.documentElement.style.setProperty('--primary-color', palette.primaryColor);
+    document.documentElement.style.setProperty('--secondary-color', palette.secondaryColor);
+    document.documentElement.style.setProperty('--background-color', palette.backgroundColor);
+    document.documentElement.style.setProperty('--text-color', palette.textColor);    
 };
 
 function updateArtwork(artworkIndex) {

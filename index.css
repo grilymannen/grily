@@ -1,5 +1,17 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #ffffff;
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
+html {
+    background-color: var(--background-color);
+}
+
 body {
     margin: 0px;
+    
 }
 
 body * {
@@ -28,13 +40,16 @@ body * {
     margin: 0px;
     padding: 10px;
     max-width: 100%;
-    filter: blur(3px)
+    filter: blur(3px);
 }
 
 #header-content {
     padding: 50px 20vw;
-    background-color: rgba(176, 196, 222, 0.6);
+    background-color: var(--background-color);
     border-radius: 12px;
+    opacity: 0.8;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: var(--text-color)
 }
 
 
@@ -51,53 +66,85 @@ body * {
 }
 
 #navigation-bar {
-    background-color: blanchedalmond;
-    overflow: hidden;
+    background-color: var(--secondary-color);
+    
 }
 
 #navigation-bar ul {
     margin: 0px;
     padding: 0px;
+    list-style: none;
+    
 }
 
 
-#navigation-bar li {
+#navigation-bar a {
     float: left;
-    text-decoration: none;
     
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     list-style: none;
 
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
     text-align: center;
     padding: 14px 16px;
     margin: 5px 5px;
 }
 
-#navigation-bar li:hover {
-    background-color: rgb(235, 215, 185);
+#navigation-bar a:hover {
+    background-color: var(--secondary-color);
     cursor: pointer;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown-holder {
+    float: left;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    list-style: none;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    text-align: center;
+    
+    margin: 5px 5px;
+}
+
+#dropdown-holder:hover {
+    background-color: var(--secondary-color);
+}
+
 .dropdown-content {
-    display:none;
+    display: none;
     position: absolute;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+}
+
+.dropdown-content.show {
+    display: block;
+
+}
+
+.dropdown-content a {
+    padding: 10px 8px;
+    background-color: var(--background-color);
 }
 
 .dropdown-button {
     background-color: transparent;
     border-style: none;
-    font-size: 14px;
+    font-size: 16px;
+
+    cursor: pointer;
+    padding: 14px 16px;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+
+.unstyle-link * {
+    color: var(--text-color);
+    text-decoration: none;
 }
 
-.show {
-    display:block;
-}
