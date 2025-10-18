@@ -24,7 +24,7 @@ function checkDate() {
     let indexValue = currentHour % 4; // Change to artwork.length when all objects have full key value pairs
 
     console.log(indexValue, artworks.length, d.getMinutes());     //console.log values for debugging purposes
-    indexValue = 3;    // Manually set indexValue
+    // indexValue = 3;    // Manually set indexValue
 
     // Call update functions
     updateArtwork(indexValue)
