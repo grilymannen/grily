@@ -1,1 +1,1 @@
-# grily.github.io
+# grilymannen.github.io/grily/
