@@ -40,6 +40,12 @@ function toggleBlur() {
     } else {
         document.getElementById('header-image').style.filter = 'blur(3px)';
     }
+
+    const icon1 = document.getElementById('icon1');
+    const icon2 = document.getElementById('icon2');
+
+    icon1.classList.toggle('toggle-icon');
+    icon2.classList.toggle('toggle-icon');
 };
 
 function colorPaletteUpdate(colorPaletteIndex) {
@@ -64,8 +70,6 @@ function updateArtwork(artworkIndex) {
     document.getElementById('artist').href = artworks[artworkIndex].artistSource;
 
 };
-
-
 
 
 checkDate()
