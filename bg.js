@@ -11,10 +11,10 @@ const artworks = [
     { image: '', imageSource: '', artist: '', artistSource: ''},
 ];
 const colorPalettes = [
-    {primaryColor: '#d68d71', secondaryColor: '#d1942e', backgroundColor: '#e9e2c5', textColor: '#460000'},
-    {primaryColor: '#bebccb', secondaryColor: '#4f4d5f', backgroundColor: '#ffffff', textColor: '#17171c'},
-    {primaryColor: '#e89788', secondaryColor: '#d25c56', backgroundColor: '#000309', textColor: '#e8b9b3'},
-    {primaryColor: '#8ac2c3', secondaryColor: '#68719c', backgroundColor: '#b1fcf3', textColor: '#2e5986'},
+    {primaryColor: '#d68d71', shadowColor: 'rgba(0,0,0,0.2)', backgroundColor: '#e9e2c5', textColor: '#460000'},
+    {primaryColor: '#bebccb', shadowColor: 'rgba(0,0,0,0.2)', backgroundColor: '#ffffff', textColor: '#17171c'},
+    {primaryColor: '#e89788', shadowColor: 'rgba(255, 200, 200, 0.2)', backgroundColor: '#000309', textColor: '#e8b9b3'},
+    {primaryColor: '#8ac2c3', shadowColor: 'rgba(0,0,0,0.2)', backgroundColor: '#b1fcf3', textColor: '#2e5986'},
 ];
 
 function checkDate() {
@@ -24,7 +24,7 @@ function checkDate() {
     let indexValue = currentHour % 4; // Change to artwork.length when all objects have full key value pairs
 
     console.log(indexValue, artworks.length, d.getMinutes());     //console.log values for debugging purposes
-    // indexValue = 3;    // Manually set indexValue
+    // indexValue = 0;    // Manually set indexValue
 
     // Call update functions
     updateArtwork(indexValue)
@@ -48,11 +48,13 @@ function toggleBlur() {
     icon2.classList.toggle('toggle-icon');
 };
 
+// Add hover color, whole website is gonna look shittier when with darker themes
+
 function colorPaletteUpdate(colorPaletteIndex) {
     const palette = colorPalettes[colorPaletteIndex];
     
     document.documentElement.style.setProperty('--primary-color', palette.primaryColor);
-    document.documentElement.style.setProperty('--secondary-color', palette.secondaryColor);
+    document.documentElement.style.setProperty('--shadow-color', palette.shadowColor);
     document.documentElement.style.setProperty('--background-color', palette.backgroundColor);
     document.documentElement.style.setProperty('--text-color', palette.textColor);    
 };

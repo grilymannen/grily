@@ -1,6 +1,6 @@
 :root {
     --primary-color: #ffffff;
-    --secondary-color: #ffffff;
+    --shadow-color: #ffffff;
     --background-color: #ffffff;
     --text-color: #000000;
 
@@ -30,6 +30,11 @@ body {
     right: 16px;
 }
 
+.bottom-right > a,
+.bottom-right > span {
+    color: var(--text-color);
+}
+
 .bottom-right > button {
     font-size: 16px;
     color: var(--text-color);
@@ -54,7 +59,7 @@ body {
     background-color: var(--background-color);
     border-radius: 12px;
     opacity: 0.8;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px var(--shadow-color);
     color: var(--text-color)
 }
 
@@ -62,9 +67,22 @@ body {
     transform: rotate(0deg);
     transition: transform 0.3s;
 }
+
 .rotate:hover svg {
     transform: rotate(180deg);
 }
+
+.image-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border-color: var(--text-color);
+}
+
+.image-button:hover {
+    background-color: var(--shadow-color);
+}
+
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hide-scrollbar::-webkit-scrollbar {
@@ -79,8 +97,12 @@ body {
 }
 
 .navigation-bar {
+    display: flex;
     text-align: center;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px var(--shadow-color);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 
@@ -89,13 +111,13 @@ body {
     margin: 10px;
     text-decoration: none;
     padding: 8px;
-    border-bottom: 3px solid var(--text-color);
+    box-shadow: 0 3px 0 var(--text-color);
     transition: box-shadow 0.2s, background-color 0.2s;
 }
 
 .navigation-bar > a:hover {
-    box-shadow: 0 4px 0 var(--text-color);
-    background-color: rgba(0,0,0,0.1);
+    box-shadow: 0 6px 0 var(--text-color);
+    background-color: var(--shadow-color);
 }
 
 
@@ -107,25 +129,26 @@ body {
 .dropdown-button {
     font-size: 16px;
     cursor: pointer;
-    padding: 8px 14px;
+    padding: 8px;
     border-width: 0px;
     background-color: transparent;
     color: var(--text-color);
     font-family: var(--default-font);
     box-shadow: 0 3px 0 var(--text-color);
     transition: box-shadow 0.2s, background-color 0.2s;
+    margin: 10px;
 }
 
 .dropdown-button:hover {
     box-shadow: 0 6px 0 var(--text-color);
-    background-color: rgba(0,0,0,0.1);
+    background-color: var(--shadow-color);
 }
 
 
 .dropdown-content {
     display: none;
     position: absolute;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px var(--shadow-color);
     z-index: 1;
     width: 100%;
     background-color: transparent;
@@ -142,7 +165,7 @@ body {
 .dropdown-content > a {
     display: block;
     margin: 10px 7px;
-
+    padding: 5px;
     text-decoration: none;
     color: var(--text-color);
     transition: box-shadow 0.2s ease, background-color 0.2s ease;
@@ -150,17 +173,17 @@ body {
 
 .dropdown-content > a:hover {
     box-shadow: 0 2px 0 var(--text-color);
-    background-color: rgba(0,0,0,0.1);
+    background-color: var(--shadow-color);
 }
 
 .icon-sml {
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
 }
 
 .icon-med {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
 }
 
 .toggle-icon {
