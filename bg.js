@@ -48,8 +48,6 @@ function toggleBlur() {
     icon2.classList.toggle('toggle-icon');
 };
 
-// Add hover color, whole website is gonna look shittier when with darker themes
-
 function colorPaletteUpdate(colorPaletteIndex) {
     const palette = colorPalettes[colorPaletteIndex];
     

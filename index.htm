@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html class="hide-scrollbar">
+<html class="hide-scrollbar" lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <title>Home ·『 My website 』</title>
     <link rel="stylesheet" href="index.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
 <body id="page">
@@ -40,12 +40,14 @@
             <a id="artist" href="#">Artist</a>
         </div>
     </header>
+
+    <!--TODO: For every link in this navbar, PLEASE add proper hypertext references!!!-->
     <nav class="navigation-bar">
         <a href="#">Home</a>
         <a href="#">About Me</a>
         <div class="dropdown">
 
-            <!--I don't know how the fuck to fix this god damn button without compromising looks-->
+            <!--I don't know how the fuck to fix this god damn button without compromising looks, so this'll have to work for now-->
             <button type="button" onclick="toggleDropdown(event)" class="dropdown-button" style="display: inline-flex; align-items: center; gap: 5px;">
                 <span>Friends</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 icon-med">
@@ -58,21 +60,23 @@
                 <a href="#">link 3</a>
             </div>
         </div>
-        
         <a href="#">Socials</a>
         <a href="#">Write me</a>
         <a href="#">I know, the links doesn't work, but idc</a>
         <a href="#">I'll fix it later</a>
- 
     </nav>
     <br>
-    
-    <div style="height: 1000px;"></div>
+    <!--TODO: Content somewhere in between here... -->
+    <div style="height: 1500px;"></div> <!--Yes I will remove this shit later-->
 
-    <!--For fucks sake, remember to remove this shit-->
+
+    <!--...and here.-->
+
+    <!--TODO: And for fucks sake, remember to remove this shit-->
     <img src="Background Images/9c40e39c197c4993ff38d38158656b0b.jpg" style="float: right; width: 100px; height: 100px;">
     <p style="display: block; float:right; margin: 16px; color: var(--text-color);" >i'm still adding shit so fuck off </p>
 
+    <!--Scripts-->
     <script src="bg.js"></script>
     <script src="dropdown.js"></script>
 </body>
